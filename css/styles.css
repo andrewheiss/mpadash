@@ -1,0 +1,284 @@
+/* @override 
+	http://mpadash/css/layout.css
+	http://drupaldev/sites/drupaldev/themes/mpadash/css/styles.css?d*/
+
+/* @group Resets */
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}caption,th {text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym {border:0;}
+
+/* @end */
+
+/* ================ */
+/* = The 1Kb Grid = */     /* 16 columns, 60 pixels each, with 20 pixel gutter */
+/* ================ */
+
+.grid_1 { width:60px; }
+.grid_2 { width:140px; }
+.grid_3 { width:220px; }
+.grid_4 { width:300px; }
+.grid_5 { width:380px; }
+.grid_6 { width:460px; }
+.grid_7 { width:540px; }
+.grid_8 { width:620px; }
+.grid_9 { width:700px; }
+.grid_10 { width:780px; }
+.grid_11 { width:860px; }
+.grid_12 { width:940px; }
+.grid_13 { width:1020px; }
+.grid_14 { width:1100px; }
+.grid_15 { width:1180px; }
+.grid_16 { width:1260px; }
+
+.column {
+	margin: 0 10px;
+	overflow: hidden;
+	float: left;
+	display: inline;
+}
+.row {
+	width: 1280px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.row .row {
+	margin: 0 -10px;
+	width: auto;
+	display: inline-block;
+}
+
+#dashboard .grid_1 { width:10px; }
+#dashboard .grid_2 { width:90px; }
+#dashboard .grid_3 { width:170px; }
+#dashboard .grid_4 { width:250px; }
+#dashboard .grid_5 { width:330px; }
+#dashboard .grid_6 { width:410px; }
+#dashboard .grid_7 { width:490px; }
+#dashboard .grid_8 { width:570px; }
+#dashboard .grid_9 { width:650px; }
+#dashboard .grid_10 { width:730px; }
+#dashboard .grid_11 { width:810px; }
+#dashboard .grid_12 { width:890px; }
+#dashboard .grid_13 { width:970px; }
+#dashboard .grid_14 { width:1050px; }
+#dashboard .grid_15 { width:1130px; }
+#dashboard .grid_16 { width:1210px; }
+#dashboard .row {
+	padding: 10px 0;
+}
+
+tr.even, tr.odd {
+	background-color: #444;
+	border-bottom: 1px solid #ccc;
+	padding: 0.1em 0.6em;
+}
+
+.region-box-under-time {
+	width: 310px;
+	height: 300px;
+}
+
+#sidebar {
+	height: 620px;
+}
+
+#large-image {
+	width: 940px;
+	height: 620px;
+}
+
+.column > aside {
+	margin-bottom: 10px;
+}
+
+#sidebar aside {
+	width: 250px;
+}
+
+#bottom-bar aside {
+	width: 570px;
+}
+
+body {
+	background-color: #353535;
+	font: 125%/1.4em "PT Sans Narrow";
+	color: #fefefe;
+}
+
+#dashboard {
+	padding: 20px 0;
+}
+
+#dashboard h2 {
+	font: 110% "Copse";
+}
+
+#dashboard aside {
+	height: 250px;
+	padding: 25px;
+	background-color: #515151;
+}
+
+.fake-table {
+	display: table; 
+	padding: 0; 
+	width: 100%;
+}
+
+.fake-row {
+	display: table-row;
+}
+
+.fake-cell {
+	display: table-cell; 
+	padding: 3px 0;
+}
+
+.fake-cell.date {
+	width: 10%;
+	padding-right: 15px;
+	color: #a9a9a9;
+}
+
+.fake-cell.time {
+	width: 13%;
+	color: #a9a9a9;
+}
+
+#dashboard table {  
+    width: 100%;  
+    border-spacing: 5px;
+    line-height: 1.1em;
+}
+
+#dashboard td {  
+    padding: 5px 0;
+}
+
+.calendar td:first-child {  
+    width: 10%;
+	color: #a9a9a9;
+}
+
+.calendar .time {
+	width: 13%;
+	color: #a9a9a9;
+}
+
+.calendar td:last-child {
+	padding-left: 15px !important;
+	color: #fff;
+}
+
+.career td:not(:first-child) {
+	width: 45%;
+}
+
+.calendar .today {
+	background-color: #3b3b3b;
+}
+
+.career td:first-child {
+	text-transform: uppercase;
+	font-size: 60%;
+}
+
+.career .local {
+	color: #ff6eda;
+}
+
+.career .state {
+	color: #ffd869;
+}
+
+.career .hr {
+	color: #00ffd4;
+}
+
+.career .nonprofit {
+	color: #00ff8a;
+}
+
+.career .other {
+	color: #f7ff63;
+}
+
+.career td:nth-child(2) {
+	color: #a9a9a9;
+}
+
+#dashboard .content {
+	position: relative;
+	bottom: 25px;
+	padding: 10px 0 0;
+}
+
+
+#dashboard aside h2 {
+	background-color: #f00;
+	color: #ffffff;
+	padding: 10px 25px;
+	width: 100%;
+	position: relative;
+	bottom: 25px;
+	right: 25px;
+}
+
+.calendar h2, birthday h2 {
+	background-color: #f00;
+}
+
+.career h2 {
+	background-color: #004b96 !important;
+}
+
+#datetime {
+	border-bottom: 1px solid white;
+	padding-bottom: .3em;
+}
+
+#time {
+	font-size: 200%;
+	line-height: 1em;
+	font-weight: bold;
+}
+
+#date {
+	color: #a9a9a9;
+}
+
+#today, #tomorrow {
+	width: 100%;
+	overflow: hidden;
+}
+
+#today {
+	margin: .7em 0 .5em;
+}
+
+#today img {
+	float: left;
+	width: 100px;
+	margin-right: .7em;
+}
+
+#tomorrow img {
+	float: left;
+	width: 50px;
+	margin-right: .7em;
+}
+
+#today .details {
+	font-size: 130%;
+	line-height: 1.3em;
+}
+
+#tomorrow .details {
+	font-size: 80%;
+	line-height: 1.1em;
+}
+
+#tomorrow strong {
+	font-weight: bold;
+	color: #a9a9a9;
+}
+
