@@ -66,10 +66,14 @@ scripts[]	= js/show_time_weather.js
   ; To add a new region, copy Zen's page.tpl.php to your sub-theme's directory,
   ; add a line line to this file, and then add the new variable to your
   ; page.tpl.php template.
-regions[box_under_time] = Box under time
-regions[large_image]	= Large image
-regions[bottom_left]	= Bottom left
-regions[bottom_right]	= Bottom right
+regions[box_under_time] 			= Box under time
+regions[large_area_image]			= Large image
+regions[large_area_top_left]		= Top left (large area)
+regions[large_area_top_right]		= Top right (large area)
+regions[large_area_bottom_left]		= Bottom left (large area)
+regions[large_area_bottom_right]	= Bottom right (large area)
+regions[ticker]						= Ticker
+regions[admin_navigation]			= Admin navigation
 
   ; Various page elements output by the theme can be toggled on and off. The
   ; "features" control which of these check boxes display on the

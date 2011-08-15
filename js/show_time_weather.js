@@ -4,14 +4,14 @@ $(function() {
 	        unit: 'f',
 	        success: function(weather) {
 					html = '<div id="today">'
-					html +=	'<img src="sites/drupaldev/themes/mpadash/images/weather/'+weather.code+'.png" />'
+					html +=	'<img src="/sites/drupaldev/themes/mpadash/images/weather/'+weather.code+'.png" />'
 					html +=	'<div class="details">'
 					html +=	'	<p>'+weather.temp+'&deg; '+weather.units.temp+'</p>'
 					html +=	'	<p>'+weather.currently+'</p>'
 					html += '	</div>'
 					html += '</div>'
 					html += '<div id="tomorrow">'
-					html += '	<img src="sites/drupaldev/themes/mpadash/images/weather/'+weather.tomorrow.code+'.png" />'
+					html += '	<img src="/sites/drupaldev/themes/mpadash/images/weather/'+weather.tomorrow.code+'.png" />'
 					html += '	<div class="details">'
 					html += '		<p><strong>Tomorrow:</strong></p>'
 					html += '		<p>'+weather.tomorrow.forecast+'<p>'

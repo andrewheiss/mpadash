@@ -120,33 +120,69 @@
 </head>
 <body id="dashboard" class="<?php echo $classes; ?>">
 	<?php if (!$is_front): ?>
-		<?php print $tabs; ?>
-		<?php print $content; ?>		
+		<section id="mini-content-wrapper" class="row">
+			<section id="navigation" class="column grid_4">
+				<?php print $admin_navigation; ?>
+			</section>
+			<section id="mini-content" class="column grid_12">
+				<?php print $tabs; ?>
+				<?php print $content; ?>
+			</section>
+		</section>	
 	<?php endif ?>
 	
 	<?php print $messages; ?>
-	
+
 	<div class="row">
-		<div id="sidebar" class="column">
-			<aside id="info">
-				<div id="datetime">
-					<div id="time"></div>
-					<div id="date"></div>
+		<div id="sidebar" class="column grid_4">
+			<div class="first-row">
+				<div class="column grid_4">
+					<aside id="info">
+						<div id="datetime">
+							<div id="time"></div>
+							<div id="date"></div>
+						</div>
+						<div id="weather"></div>
+					</aside>
 				</div>
-				<div id="weather"></div>
-			</aside>
+			</div>
 			<div class="row">
-				<?php print $box_under_time; ?>
+				<div id="box-under-time" class="cycle column grid_4">
+					<?php print $box_under_time; ?>
+				</div>
 			</div>
 		</div>
-		<div id="large-image" class="column">
-			<?php print $large_image; ?>
+		<div id="large-area" class="cycle column grid_12">
+			<section id="blocks">
+				<div class="first-row">
+					<div class="column grid_4">
+						<?php print $large_area_top_left; ?>
+					</div>
+					<div class="column grid_8">
+						<?php print $large_area_top_right; ?>
+					</div>
+				</div>
+				<div class="row">
+					<div class="column grid_8">
+						<?php print $large_area_bottom_left; ?>
+					</div>
+					<div class="column grid_4">
+						<?php print $large_area_bottom_right; ?>
+					</div>
+				</div>
+			</section>
+			<section id="large-image">
+				<?php print $large_area_image; ?>
+			</section>
 		</div>
 	</div>
-	<div id="bottom-bar" class="row">
-		<?php print $bottom_left; ?>
-		<?php print $bottom_right; ?>
+	
+	<div id="ticker-wrapper" class="row">
+		<div id="ticker" class="column grid_16">
+			<?php print $ticker; ?>
+		</div>
 	</div>
+	
 	<?php if ($use_google_jquery): ?>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	<?php endif ?>
@@ -154,11 +190,10 @@
 	<?php print $scripts; ?>
 	<script>
 	// $(document).ready(function() {
-	//     $('.region-box-under-time').cycle({
-	// 		fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+	//     $('.cycle').cycle({
+	// 		fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
 	// 	});
 	// });
-	</script>
 	</script>
 </body>
 </html>

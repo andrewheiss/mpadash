@@ -1,4 +1,4 @@
-<aside id="<?php print $block_html_id; ?>" class="column <?php print $classes; ?> <?php print block_class($block); ?>">
+<aside id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> <?php print block_class($block); ?>">
   <?php if ($title): ?>
     <h2 class="title"><?php print $title; ?></h2>
   <?php endif; ?>
