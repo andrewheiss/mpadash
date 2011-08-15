@@ -177,8 +177,22 @@ a:hover {
 	height: 620px;
 }
 
-#box-under-time {
+#blocks .column, #box-under-time {
 	height: 300px;
+}
+
+#large-image {
+	height: 620px;
+}
+
+#large-image aside {
+	height: 620px;
+	padding: 0;
+}
+
+#large-image .content {
+	bottom: 0;
+	padding: 0;
 }
 
 #box-under-time aside {
@@ -308,7 +322,7 @@ a:hover {
 }
 
 #ticker-wrapper {
-	padding: 0 !important;
+	padding: 5px 0 0 !important;
 }
 
 #ticker {
