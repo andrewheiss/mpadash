@@ -155,10 +155,10 @@
 		<div id="large-area" class="cycle column grid_12">
 			<section id="blocks">
 				<div class="first-row">
-					<div class="column grid_4">
+					<div class="column grid_8">
 						<?php print $large_area_top_left; ?>
 					</div>
-					<div class="column grid_8">
+					<div class="column grid_4">
 						<?php print $large_area_top_right; ?>
 					</div>
 				</div>
