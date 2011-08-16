@@ -98,6 +98,11 @@ function mpadash_preprocess(&$vars, $hook) {
  */
 
 function mpadash_preprocess_page(&$vars, $hook) {
+	$weather_image_path = base_path() . path_to_theme() . '/images/weather/';
+	drupal_add_js(array('vars' => array(
+	'path' => $weather_image_path,
+	)), 'setting');
+	
 	// Disable Drupal's jQuery since Google's CDN version is hardcoded in the template, but not on admin, edit, or add pages
 	$curr_uri = request_uri();
 	if (!strpos($curr_uri,'admin') > 0 && !strpos($curr_uri,'edit') > 0 && !strpos($curr_uri,'add') > 0 && !strpos($curr_uri,'batch') > 0) {
