@@ -153,6 +153,9 @@
 			</div>
 		</div>
 		<div id="large-area" class="cycle column grid_12">
+			<section id="large-image">
+				<?php print $large_area_image; ?>
+			</section>
 			<section id="blocks">
 				<div class="first-row">
 					<div class="column grid_8">
@@ -171,9 +174,7 @@
 					</div>
 				</div>
 			</section>
-			<section id="large-image">
-				<?php print $large_area_image; ?>
-			</section>
+			
 		</div>
 	</div>
 	
@@ -192,6 +193,8 @@
 	// $(document).ready(function() {
 	//     $('.cycle').cycle({
 	// 		fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+	// 		timeout: 15000,
+	// 		speed: 700,
 	// 	});
 	// });
 	</script>
