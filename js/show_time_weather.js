@@ -4,14 +4,14 @@ $(function() {
 	        unit: 'f',
 	        success: function(weather) {
 					html = '<div id="today">'
-					html +=	'<img src="'+Drupal.settings.vars.path+weather.code+'.png" />'
+					html +=	'<img src="'+Drupal.settings.vars.weather_path+weather.code+'.png" />'
 					html +=	'<div class="details">'
 					html +=	'	<p>'+weather.temp+'&deg; '+weather.units.temp+'</p>'
 					html +=	'	<p>'+weather.currently+'</p>'
 					html += '	</div>'
 					html += '</div>'
 					html += '<div id="tomorrow">'
-					html += '	<img src="'+Drupal.settings.vars.path+weather.tomorrow.code+'.png" />'
+					html += '	<img src="'+Drupal.settings.vars.weather_path+weather.tomorrow.code+'.png" />'
 					html += '	<div class="details">'
 					html += '		<p><strong>Tomorrow:</strong></p>'
 					html += '		<p>'+weather.tomorrow.forecast+'<p>'

@@ -1,5 +1,5 @@
 /* @override http://mpadash/css/new.css 
-http://drupaldev/sites/drupaldev/themes/mpadash/css/styles.css?Q
+http://drupaldev/sites/drupaldev/themes/mpadash/css/styles.css?Y
 */
 
 
@@ -117,6 +117,9 @@ body {
 	background-color: #353535;
 	font: 125%/1.4em "PT Sans Narrow";
 	color: #fefefe;
+}
+
+#dashboard {
 	/*zoom: 1.5;*/
 }
 
@@ -339,9 +342,10 @@ a:hover {
 
 #ticker-wrapper {
 	padding: 5px 0 0 !important;
+	height: 2em;
 }
 
-#ticker {
+.ticker {
 	background-color: #515151;
 	width: 1240px;
 	padding: 10px;
@@ -349,18 +353,18 @@ a:hover {
 	color: #a9a9a9;
 }
 
-#ticker #views_slideshow_singleframe_teaser_section_news_ticker-block_1[style], #ticker .views_slideshow_singleframe_slide {
+.ticker #views_slideshow_singleframe_teaser_section_news_ticker-block_1[style], .ticker .views_slideshow_singleframe_slide {
 	/*Override the Views Slideshow inline width*/
 	width: 1240px;
 }
 
-#ticker .ticker-item {
+.ticker .ticker-item {
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
 }
 
-#ticker .date {
+.ticker .date {
 	padding: 0 .7em;
 	font-size: .6em;
 	text-transform: uppercase;
@@ -368,7 +372,7 @@ a:hover {
 	bottom: .2em;
 }
 
-#ticker .title {
+.ticker .title {
 	font-weight: bold;
 	color: #ffffff;
 }
@@ -399,6 +403,10 @@ a:hover {
 	color: #ffffff;
 	padding: 25px;
 	min-height: 250px;
+}
+
+#mini-content {
+	width: 890px;
 }
 
 #mini-content p {
@@ -507,7 +515,7 @@ a:hover {
 /* @group Admin menu */
 
 #mini-content-wrapper #navigation {
-	width: 250px;
+	width: 300px;
 }
 
 #mini-content-wrapper #navigation a {

@@ -113,6 +113,8 @@
 <head>
 	<title><?php print $head_title; ?></title>
 	<?php print $head; ?>
+	<link href='http://fonts.googleapis.com/css?family=Copse' rel='stylesheet' type='text/css'>
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular,bold" rel="stylesheet" type="text/css">
 	<?php print $styles; ?>
   
 	<meta name="description" content="" />
@@ -158,7 +160,7 @@
 			</section>
 			<section id="blocks">
 				<div class="first-row">
-					<div class="column grid_8">
+					<div class="cycle1 column grid_8">
 						<?php print $large_area_top_left; ?>
 					</div>
 					<div class="column grid_4">
@@ -178,10 +180,10 @@
 		</div>
 	</div>
 	
-	<div id="ticker-wrapper" class="row">
-		<div id="ticker" class="column grid_16">
+	<div id="ticker-wrapper" class="cycle row">
+		
 			<?php print $ticker; ?>
-		</div>
+		
 	</div>
 	
 	<?php if ($use_google_jquery): ?>
@@ -190,13 +192,19 @@
 	
 	<?php print $scripts; ?>
 	<script>
-	// $(document).ready(function() {
-	//     $('.cycle').cycle({
-	// 		fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
-	// 		timeout: 15000,
-	// 		speed: 700,
-	// 	});
-	// });
+	$(document).ready(function() {
+	    $('.cycle').cycle({
+			fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+			timeout: 15000,
+			speed: 700,
+		});
+		
+		$('.cycle1').cycle({
+			fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+			timeout: 5000,
+			speed: 700,
+		});
+	});
 	</script>
 </body>
 </html>

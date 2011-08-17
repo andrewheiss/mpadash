@@ -100,8 +100,24 @@ function mpadash_preprocess(&$vars, $hook) {
 function mpadash_preprocess_page(&$vars, $hook) {
 	$weather_image_path = base_path() . path_to_theme() . '/images/weather/';
 	drupal_add_js(array('vars' => array(
-	'path' => $weather_image_path,
+	'weather_path' => $weather_image_path,
 	)), 'setting');
+	$home_url = $GLOBALS['base_url'] .'/';
+	$redirect_url = $GLOBALS['base_url'] .'/redirect';
+	
+	if ($vars['node']->type == 'redirect') {
+		$redirect_home = "setTimeout(function() { window.location.href = '$home_url'; }, 15000);"; // 15 seconds
+		drupal_add_js($redirect_home, 'inline');
+	}
+	
+	if (drupal_is_front_page()) {
+		$redirect_away = "setTimeout(function() { window.location.href = '$redirect_url'; }, 900000);"; //15 minutes
+		drupal_add_js($redirect_away, 'inline');
+	}
+	
+	if ($vars['node']->type != "") {
+		$vars['template_files'][] = "page-node-" . $vars['node']->type;
+	}
 	
 	// Disable Drupal's jQuery since Google's CDN version is hardcoded in the template, but not on admin, edit, or add pages
 	$curr_uri = request_uri();
