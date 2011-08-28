@@ -1,4 +1,4 @@
-<div class="fake-table">
+<div class="fake-table <?php print $classes; ?>">
 <?php
 	if ($rows) {
 		print $rows;

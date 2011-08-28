@@ -1,8 +1,8 @@
-/* @override http://mpadash/css/new.css 
-http://drupaldev/sites/drupaldev/themes/mpadash/css/styles.css?Y
+/* @override 
+	http://mpadash/css/new.css
+	http://drupaldev/sites/drupaldev/themes/mpadash/css/styles.css?Y
+	http://www.andrewheiss.com/mpadash/sites/default/themes/mpadash/css/styles.css?6
 */
-
-
 
 /* @group Resets */
 
@@ -152,6 +152,7 @@ a:hover {
 
 #dashboard h2 {
 	font: 110% "Copse";
+	font-weight: normal;
 }
 
 #dashboard aside h2 {
@@ -278,6 +279,7 @@ a:hover {
 .fake-cell {
 	display: table-cell; 
 	padding: 3px 0;
+	line-height: 1.5em;
 }
 
 .fake-cell.date {
@@ -287,7 +289,7 @@ a:hover {
 }
 
 .fake-cell.time {
-	width: 13%;
+	width: 15%;
 	color: #a9a9a9;
 }
 
@@ -295,13 +297,26 @@ a:hover {
 	width: 40%;
 }
 
-.fake-cell.details {
+.fake-cell .details {
 	color: #a9a9a9;
+	font-size: .9em;
+	line-height: 1em;
+}
+
+.fake-cell .location {
+	color: #a9a9a9;
+	font-size: .8em;
+	padding-left: 10px;
+	line-height: 1em;
+}
+
+.jobs .fake-cell {
+	padding-bottom: 6px;
 }
 
 /* @end */
 
-/* @group Calendar */
+/* @group Calendar block */
 
 
 
@@ -341,21 +356,29 @@ a:hover {
 /* @group Ticker */
 
 #ticker-wrapper {
-	padding: 5px 0 0 !important;
 	height: 2em;
+	margin-top: 10px;
 }
 
 .ticker {
 	background-color: #515151;
 	width: 1240px;
 	padding: 10px;
-	height: 1.3em;
+	height: 1.4em;
 	color: #a9a9a9;
 }
 
 .ticker #views_slideshow_singleframe_teaser_section_news_ticker-block_1[style], .ticker .views_slideshow_singleframe_slide {
 	/*Override the Views Slideshow inline width*/
 	width: 1240px;
+}
+
+#large-area .grid_8 aside[style] {
+	width: 620px;
+}
+
+#large-area .grid_4 aside[style] {
+	width: 300px;
 }
 
 .ticker .ticker-item {
@@ -375,6 +398,12 @@ a:hover {
 .ticker .title {
 	font-weight: bold;
 	color: #ffffff;
+}
+
+.ticker .feed-title {
+	padding-right: .5em;
+	margin-right: .5em;
+	border-right: 3px solid #a9a9a9;
 }
 
 /* @end */
@@ -403,24 +432,64 @@ a:hover {
 	color: #ffffff;
 	padding: 25px;
 	min-height: 250px;
+	width: 890px;
 }
 
-#mini-content {
-	width: 890px;
+#mini-content h2 {
+	font-family: "Copse";
+	font-size: 1.5em;
+	border-bottom: 3px solid #bcbcbc;
+}
+
+#mini-content h3 {
+	font-family: "Copse";
+	font-size: 1.3em;
+	padding-top: 1em;
+}
+
+#mini-content small {
+	font-size: .8em;
+	line-height: 1em;
+	color: #7a7a7a;
+}
+
+#mini-content-wrapper a {
+	color: #BCBCBC;
+}
+
+#mini-content-wrapper a:hover {
+	color: #ffffff;
+}
+
+#mini-content h2 a, #mini-content h3 a {
+	color: #fff;
 }
 
 #mini-content p {
 	padding-bottom: .5em;
 }
 
+#mini-content .field .field-label {
+	font-weight: normal;
+	border-bottom: 1px solid #bcbcbc;
+}
+
 #mini-content .meta {
 	padding-bottom: .5em;
 	font-size: .8em;
+	color: #7a7a7a;
 }
 
 #mini-content .content {
 	margin-top: 1em;
 	padding-top: 0;
+}
+
+#mini-content .pager {
+	margin-top: 1.5em;
+	font-size: .8em;
+	border-bottom: 1px solid #bcbcbc;
+	border-top: 1px solid #bcbcbc;
 }
 
 /* @group Tabs */
@@ -516,10 +585,6 @@ a:hover {
 
 #mini-content-wrapper #navigation {
 	width: 300px;
-}
-
-#mini-content-wrapper #navigation a {
-	color: #fff;
 }
 
 #mini-content-wrapper #navigation ul {
