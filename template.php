@@ -61,7 +61,7 @@
  */
 
 function clean_content($content) {
-	$search = array("Readings &amp; Due Dates:");
+	$search = array("Readings &amp; Due Dates:", "Readings:", "Assignments:");
 	return str_replace($search, '-', $content);
 } // End of clean_content()
 
