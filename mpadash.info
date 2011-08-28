@@ -51,11 +51,7 @@ stylesheets[print][] = css/print.css
 ;conditional-stylesheets[if lte IE 6][all][] = css/ie6.css
 
   ; Optionally add some JavaScripts to your theme.
-; scripts[] = js/script.js
-scripts[]	= js/clock.js
 scripts[]	= js/foutbgone.js
-scripts[]	= js/jquery.simpleWeather-1.8.min.js
-scripts[]	= js/show_time_weather.js
 
   ; The regions defined in Zen's default page.tpl.php file.  The name in
   ; brackets is the name of the variable in the page.tpl.php file, (e.g.

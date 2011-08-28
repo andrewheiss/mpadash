@@ -60,6 +60,10 @@
  *   and http://drupal.org/node/190815#template-suggestions
  */
 
+function clean_content($content) {
+	$search = array("Readings &amp; Due Dates:");
+	return str_replace($search, '-', $content);
+} // End of clean_content()
 
 /**
  * Implementation of HOOK_theme().
@@ -98,21 +102,10 @@ function mpadash_preprocess(&$vars, $hook) {
  */
 
 function mpadash_preprocess_page(&$vars, $hook) {
-	$weather_image_path = base_path() . path_to_theme() . '/images/weather/';
-	drupal_add_js(array('vars' => array(
-	'weather_path' => $weather_image_path,
-	)), 'setting');
-	$home_url = $GLOBALS['base_url'] .'/';
-	$redirect_url = $GLOBALS['base_url'] .'/redirect';
-	
-	if ($vars['node']->type == 'redirect') {
-		$redirect_home = "setTimeout(function() { window.location.href = '$home_url'; }, 15000);"; // 15 seconds
-		drupal_add_js($redirect_home, 'inline');
-	}
-	
-	if (drupal_is_front_page()) {
-		$redirect_away = "setTimeout(function() { window.location.href = '$redirect_url'; }, 900000);"; //15 minutes
-		drupal_add_js($redirect_away, 'inline');
+	if (!module_exists('dashboard_settings')) {
+		print '<h1>' . t('Module missing') . '</h1>';
+		print '<h3>' . t('The MPA dashboard theme requires the custom Dashboard Settings module to work correctly. Please download and enable the module.') . '</h3>';
+		print '<h6>' . t( 'Warning generated in file: %f', array ( '%f'=>__FILE__ )) . '</h6>';
 	}
 	
 	if ($vars['node']->type != "") {
