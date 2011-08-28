@@ -3,8 +3,8 @@
 <head>
 	<title><?php print $head_title; ?></title>
 	<?php print $head; ?>
-	<link href='http://fonts.googleapis.com/css?family=Copse' rel='stylesheet' type='text/css'>
-	<link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular,bold" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Copse' rel='stylesheet' type='text/css' />
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular,bold" rel="stylesheet" type="text/css" />
 	<?php print $styles; ?>
   
 	<meta name="description" content="" />
