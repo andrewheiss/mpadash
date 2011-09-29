@@ -79,7 +79,7 @@
 	
 	<?php print $scripts; ?>
 	<script>
-	$(document).ready(function() {
+	$(document).ready(function() {		
 	    $('#ticker-wrapper').cycle({
 			fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
 			timeout: <?php print $ticker_block_duration; ?>,

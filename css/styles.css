@@ -1,7 +1,7 @@
 /* @override 
 	http://mpadash/css/new.css
-	http://drupaldev/sites/drupaldev/themes/mpadash/css/styles.css?Y
-	http://www.andrewheiss.com/mpadash/sites/default/themes/mpadash/css/styles.css?6
+	http://drupaldev/sites/drupaldev/themes/mpadash/css/styles.css?k
+	http://www.andrewheiss.com/mpadash/sites/default/themes/mpadash/css/styles.css?7
 */
 
 /* @group Resets */
@@ -191,6 +191,7 @@ a:hover {
 
 #large-image {
 	height: 620px;
+	text-align: center;
 }
 
 #large-image aside {
@@ -318,8 +319,6 @@ a:hover {
 
 /* @group Calendar block */
 
-
-
 .block-calendar_table .content {
 	bottom: 0 !important;
 	padding: 0 !important;
@@ -349,6 +348,11 @@ a:hover {
 
 .block-calendar_table td {
 	font-size: .9em;
+}
+
+.birthday-today {
+	color: #ffe400;
+	font-weight: bold;
 }
 
 /* @end */
